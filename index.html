@@ -42,6 +42,7 @@
       .attribution {
         font-size: 11px;
         text-align: center;
+        font-family: var(--font-family);
       }
       .attribution a {
         color: hsl(228, 45%, 44%);
@@ -55,20 +56,31 @@
         min-height: 100vh;
       }
 
+      main {
+        flex: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      footer {
+        padding-bottom: var(--spacing-200);
+      }
       .card {
         background-color: white;
-        width: 320px;
+        width: min(320px, 92%);
         height: auto;
         padding: var(--spacing-200);
         padding-bottom: var(--spacing-500);
         border-radius: var(--rounded-border);
-        margin-bottom: 100px;
+        /*margin-bottom: 100px;*/
         box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
       }
       .qrcode {
         width: 288px;
         border-radius: 10px;
         margin-bottom: var(--spacing-300);
+        max-width: 100%;
+        height: auto;
       }
       .card-title {
         font-family: var(--font-family);
@@ -83,7 +95,6 @@
       }
       .card-description {
         font-family: var(--font-family);
-        font-optical-sizing: auto;
         font-weight: 400;
         font-style: normal;
         color: var(--secondary-text);
@@ -95,20 +106,22 @@
     </style>
   </head>
   <body class="main-background">
-    <div class="card">
-      <img
-        class="qrcode"
-        src="./images/image-qr-code.png"
-        alt="qr code menant sur le site de Frontend Mentor"
-      />
-      <h2 class="card-title">
-        Improve your front-end skills by building projects
-      </h2>
-      <p class="card-description">
-        Scan the QR code to visit Frontend Mentor and take your coding skills to
-        the next level
-      </p>
-    </div>
+    <main>
+      <div class="card">
+        <img
+          class="qrcode"
+          src="./images/image-qr-code.png"
+          alt="qr code menant sur le site de Frontend Mentor"
+        />
+        <h1 class="card-title">
+          Improve your front-end skills by building projects
+        </h1>
+        <p class="card-description">
+          Scan the QR code to visit Frontend Mentor and take your coding skills
+          to the next level
+        </p>
+      </div>
+    </main>
 
     <footer>
       <div class="attribution">
