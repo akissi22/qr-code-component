@@ -1,28 +1,122 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
 
-  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | QR code component</title>
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
+    <title>Frontend Mentor | QR code component</title>
 
-  Improve your front-end skills by building projects
+    <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+    <style>
+      :root {
+        --body-bg: #d5e1ef;
+        --title: #1f314f;
+        --secondary-text: #68778d;
+        --spacing-500: 40px;
+        --spacing-300: 24px;
+        --spacing-200: 16px;
+        --rounded-border: 20px;
+        --font-family: "Outfit", sans-serif;
+        --font-title: 22px;
+        --font-description: 15px;
+      }
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      .attribution {
+        font-size: 11px;
+        text-align: center;
+      }
+      .attribution a {
+        color: hsl(228, 45%, 44%);
+      }
+      .main-background {
+        background-color: var(--body-bg);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+      }
 
-  Scan the QR code to visit Frontend Mentor and take your coding skills to the next level
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </div>
-</body>
+      .card {
+        background-color: white;
+        width: 320px;
+        height: auto;
+        padding: var(--spacing-200);
+        padding-bottom: var(--spacing-500);
+        border-radius: var(--rounded-border);
+        margin-bottom: 100px;
+        box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
+      }
+      .qrcode {
+        width: 288px;
+        border-radius: 10px;
+        margin-bottom: var(--spacing-300);
+      }
+      .card-title {
+        font-family: var(--font-family);
+        font-optical-sizing: auto;
+        font-weight: 700;
+        font-style: normal;
+        text-align: center;
+        line-height: 120%;
+        color: var(--title);
+        font-size: var(--font-title);
+        margin-bottom: var(--spacing-200);
+      }
+      .card-description {
+        font-family: var(--font-family);
+        font-optical-sizing: auto;
+        font-weight: 400;
+        font-style: normal;
+        color: var(--secondary-text);
+        font-size: var(--font-description);
+        text-align: center;
+        letter-spacing: 0.2px;
+        line-height: 140%;
+      }
+    </style>
+  </head>
+  <body class="main-background">
+    <div class="card">
+      <img
+        class="qrcode"
+        src="/images/image-qr-code.png"
+        alt="qr code menant sur le site de Frontend Mentor"
+      />
+      <h2 class="card-title">
+        Improve your front-end skills by building projects
+      </h2>
+      <p class="card-description">
+        Scan the QR code to visit Frontend Mentor and take your coding skills to
+        the next level
+      </p>
+    </div>
+
+    <footer>
+      <div class="attribution">
+        Challenge by
+        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+          >Frontend Mentor</a
+        >. Coded by <a href="#">Your Name Here</a>.
+      </div>
+    </footer>
+  </body>
 </html>
