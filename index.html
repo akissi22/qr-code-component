@@ -26,13 +26,13 @@
         --body-bg: #d5e1ef;
         --title: #1f314f;
         --secondary-text: #68778d;
-        --spacing-500: 40px;
-        --spacing-300: 24px;
-        --spacing-200: 16px;
-        --rounded-border: 20px;
+        --spacing-500: 2.5rem;
+        --spacing-300: 1.5rem;
+        --spacing-200: 1rem;
+        --rounded-border: 1.25rem;
         --font-family: "Outfit", sans-serif;
-        --font-title: 22px;
-        --font-description: 15px;
+        --font-title: 1.375rem;
+        --font-description: 0.9375rem;
       }
       * {
         box-sizing: border-box;
@@ -40,7 +40,7 @@
         padding: 0;
       }
       .attribution {
-        font-size: 11px;
+        font-size: 0.68rem;
         text-align: center;
         font-family: var(--font-family);
       }
@@ -52,7 +52,6 @@
         display: flex;
         flex-direction: column;
         justify-content: center;
-        align-items: center;
         min-height: 100vh;
       }
 
@@ -61,6 +60,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
+        width: 100%;
       }
       footer {
         padding-bottom: var(--spacing-200);
@@ -76,15 +76,14 @@
         box-shadow: 0px 25px 25px 0px rgba(0, 0, 0, 0.05);
       }
       .qrcode {
-        width: 288px;
+        width: 100%;
         border-radius: 10px;
         margin-bottom: var(--spacing-300);
-        max-width: 100%;
+        max-width: 288px;
         height: auto;
       }
       .card-title {
         font-family: var(--font-family);
-        font-optical-sizing: auto;
         font-weight: 700;
         font-style: normal;
         text-align: center;
@@ -107,7 +106,7 @@
   </head>
   <body class="main-background">
     <main>
-      <div class="card">
+      <article class="card">
         <img
           class="qrcode"
           src="./images/image-qr-code.png"
@@ -120,13 +119,16 @@
           Scan the QR code to visit Frontend Mentor and take your coding skills
           to the next level
         </p>
-      </div>
+      </article>
     </main>
 
     <footer>
       <div class="attribution">
         Challenge by
-        <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
+        <a
+          href="https://www.frontendmentor.io?ref=challenge"
+          target="_blank"
+          rel="noopener noreferrer"
           >Frontend Mentor</a
         >. Coded by <a href="#">Gnogno</a>.
       </div>
